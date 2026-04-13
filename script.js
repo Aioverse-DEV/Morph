@@ -1,8 +1,20 @@
 // ── Timestamp ── 
 // Note: Displays time in IST (Indian Standard Time) as per Aiotize Inc. location
 const now = new Date();
+const istParts = new Intl.DateTimeFormat('en-CA', {
+  timeZone: 'Asia/Kolkata',
+  year: 'numeric',
+  month: '2-digit',
+  day: '2-digit',
+  hour: '2-digit',
+  minute: '2-digit',
+  hour12: false
+}).formatToParts(now).reduce((acc, part) => {
+  if (part.type !== 'literal') acc[part.type] = part.value;
+  return acc;
+}, {});
 document.getElementById('ts').textContent =
-  now.toISOString().split('T')[0] + ' ' + now.toTimeString().slice(0,5) + ' IST';
+  istParts.year + '-' + istParts.month + '-' + istParts.day + ' ' + istParts.hour + ':' + istParts.minute + ' IST';
 if (document.getElementById('submission_date')) {
   document.getElementById('submission_date').valueAsDate = now;
 }
