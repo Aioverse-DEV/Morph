@@ -73,7 +73,8 @@ The project uses:
 ## Links
 
 - Framer Project: https://framer.com/projects/Untitled--Ut6C3jE0vqBg2NYzl4si-9sqnw
-- Cloudflare Dashboard: https://dash.cloudflare.com/048e409496db06a280a582b5749a6170/workers/services/edit/morph-uav-form/production
+- Cloudflare Workers Docs: https://developers.cloudflare.com/workers/
+- Cloudflare Dashboard: Sign in to Cloudflare and navigate to Workers & Pages to manage this service.
 
 ## License
 
