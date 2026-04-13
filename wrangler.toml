@@ -1,0 +1,24 @@
+name = "morph-uav-form"
+main = "worker.js"
+compatibility_date = "2024-01-01"
+
+# Workers Sites configuration
+# This specifies the root directory for static assets
+[site]
+bucket = "."
+
+# Environment variables (configure via Cloudflare dashboard or CLI)
+# [vars]
+# ENVIRONMENT = "production"
+
+# Secrets (configure via `wrangler secret put <KEY>`)
+# EMAIL_API_KEY - for email service integration
+
+# Routes (configure as needed for your domain)
+# routes = [
+#   { pattern = "morph.aiotize.com/*", zone_name = "aiotize.com" }
+# ]
+
+# Asset binding for serving static files
+# [[assets]]
+# binding = "ASSETS"
