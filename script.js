@@ -1,4 +1,5 @@
-// ── Timestamp ──
+// ── Timestamp ── 
+// Note: Displays time in IST (Indian Standard Time) as per Aiotize Inc. location
 const now = new Date();
 document.getElementById('ts').textContent =
   now.toISOString().split('T')[0] + ' ' + now.toTimeString().slice(0,5) + ' IST';
