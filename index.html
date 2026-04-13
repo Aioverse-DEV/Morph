@@ -1254,15 +1254,25 @@ async function handleSubmit() {
     if (res.ok) {
       document.getElementById('refId').textContent = data.refId;
       document.getElementById('morphForm').style.display = 'none';
-      document.getElementById('successScreen').style.display = 'flex';
+      const successScreen = document.getElementById('successScreen');
+      successScreen.style.display = 'flex';
+      // Set focus to success message for accessibility
+      const successTitle = successScreen.querySelector('.success-title');
+      if (successTitle) {
+        successTitle.setAttribute('tabindex', '-1');
+        successTitle.focus();
+      }
     } else {
-      throw new Error('Submission failed');
+      const errorText = await res.text();
+      throw new Error(`Submission failed with status ${res.status}: ${errorText}`);
     }
   } catch (err) {
+    msg.setAttribute('role', 'alert');
     msg.textContent = 'â›" TRANSMISSION FAILED â€" RETRY OR CONTACT shivansh@aiotize.com';
     msg.style.color = 'var(--red-alert)';
     btn.disabled = false;
     btn.textContent = 'â¬¡ TRANSMIT REQUIREMENTS â¬¡';
+    console.error('Submission error:', err);
   }
 }
 </script>

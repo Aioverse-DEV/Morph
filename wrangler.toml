@@ -4,6 +4,8 @@ compatibility_date = "2024-01-01"
 
 # Workers Sites configuration
 # This specifies the root directory for static assets
+# When deployed, wrangler automatically injects code to serve files from this directory
+# The bucket = "." means serve files from the current directory
 [site]
 bucket = "."
 
