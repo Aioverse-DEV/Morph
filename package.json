@@ -1,0 +1,22 @@
+{
+  "name": "morph-uav-form",
+  "version": "1.0.0",
+  "description": "MORPH-UAV Requirements Intelligence Form - Cloudflare Worker",
+  "main": "worker.js",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "tail": "wrangler tail"
+  },
+  "keywords": [
+    "cloudflare",
+    "worker",
+    "uav",
+    "form"
+  ],
+  "author": "Aiotize Inc.",
+  "license": "SEE LICENSE IN LICENSE",
+  "devDependencies": {
+    "wrangler": "^3.0.0"
+  }
+}
