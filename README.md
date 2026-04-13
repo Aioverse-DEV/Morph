@@ -9,7 +9,8 @@ MORPH-UAV Requirements Intelligence Form - A modern HTML form for capturing UAV 
 ├── styles.css       # Stylesheet with Aiotize branding
 ├── script.js        # Client-side JavaScript
 ├── wrangler.toml    # Cloudflare Workers configuration
-├── worker.js        # Original combined file (legacy)
+├── src/
+│   └── index.js     # Worker entrypoint deployed by Wrangler
 └── README.md        # This file
 ```
 
