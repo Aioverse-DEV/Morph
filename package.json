@@ -17,6 +17,6 @@
   "author": "Aiotize Inc.",
   "license": "SEE LICENSE IN LICENSE",
   "devDependencies": {
-    "wrangler": "^3.0.0"
+    "wrangler": "^3.78.0"
   }
 }
