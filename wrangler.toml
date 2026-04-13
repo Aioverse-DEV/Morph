@@ -5,4 +5,24 @@ compatibility_date = "2024-01-01"
 # Workers Sites configuration for serving static files
 [site]
 bucket = "./"
-exclude = ["node_modules", ".*", "src", "wrangler.toml", "package.json", "worker.js"]
+exclude = [
+  "node_modules",
+  "src",
+  "test",
+  "tests",
+  "coverage",
+  "dist",
+  ".git",
+  ".github",
+  ".gitignore",
+  ".DS_Store",
+  "wrangler.toml",
+  "package.json",
+  "package-lock.json",
+  "yarn.lock",
+  "pnpm-lock.yaml",
+  "worker.js",
+  "README*",
+  "LICENSE*",
+  "*.md"
+]
