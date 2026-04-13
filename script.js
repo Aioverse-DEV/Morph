@@ -75,16 +75,24 @@ if (form) {
       // Collect form data
       const formData = new FormData(this);
       
-      // Send to server (placeholder - update with actual endpoint)
+      // Send to server
       const response = await fetch('/api/submit', {
         method: 'POST',
         body: formData
       });
       
-      if (response.ok) {
+      const result = await response.json();
+      
+      if (response.ok && result.success) {
         if (statusMsg) {
           statusMsg.className = 'success';
           statusMsg.textContent = '✓ SUBMISSION SUCCESSFUL';
+        }
+        
+        // Update reference ID
+        const refIdElement = document.getElementById('refId');
+        if (refIdElement && result.refId) {
+          refIdElement.textContent = result.refId;
         }
         
         // Show success screen
@@ -95,7 +103,7 @@ if (form) {
           if (successScreen) successScreen.style.display = 'block';
         }, 1500);
       } else {
-        throw new Error('Submission failed');
+        throw new Error(result.error || 'Submission failed');
       }
     } catch (error) {
       if (statusMsg) {

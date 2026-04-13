@@ -4,7 +4,8 @@
   "description": "MORPH-UAV Requirements Intelligence Form for Aiotize Inc.",
   "main": "index.html",
   "scripts": {
-    "dev": "python3 -m http.server 8000",
+    "dev": "npx serve -p 8000",
+    "dev:python": "python3 -m http.server 8000",
     "deploy": "wrangler deploy"
   },
   "repository": {

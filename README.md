@@ -34,9 +34,12 @@ cd Morph
 
 2. Open `index.html` in your web browser:
 ```bash
-open index.html
-# or
-python -m http.server 8000
+# Using npx serve (recommended)
+npx serve -p 8000
+
+# Or using Python
+python3 -m http.server 8000
+
 # then visit http://localhost:8000
 ```
 

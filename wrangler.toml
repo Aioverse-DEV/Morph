@@ -2,5 +2,7 @@ name = "morph-uav-form"
 main = "src/index.js"
 compatibility_date = "2024-01-01"
 
+# Workers Sites configuration for serving static files
 [site]
 bucket = "./"
+exclude = ["node_modules", ".*", "src", "wrangler.toml", "package.json", "worker.js"]
